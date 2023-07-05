@@ -37,29 +37,25 @@
                                         <div class="text-center">
                                             <img src="https://dynamic.brandcrowd.com/asset/logo/d5ff2558-a87f-4c51-8908-6a415e3a0f83/logo-search-grid-1x?logoTemplateVersion=4&v=638228442355030000&text=BMI&colorpalette=purple" style="width: 200px;" alt="logo">
                                         </div>
-                                        <form method="GET" action="Controller/runFunction.php" enctype="multipart/form-data">
+                                        <form method="POST" action="<?=$_SERVER['PHP_SELF'];?>" enctype="multipart/form-data">
                                             <div class="form-outline mb-4">
                                                 <input type="number" id="Height" name="Height" class="form-control" placeholder="ส่วนสูง" required />
                                             </div>
                                             <div class="form-outline mb-4">
                                                 <input type="number" id="Weight" name="Weight" class="form-control" placeholder="น้ำหนัก" required />
                                             </div>
-                                        <nav id="navbar" class="navbar nav-menu">
-                                            <ul>
-                                                <br><br>
+                                                <br>
                                                 <center>
-                                                    <li><a href="#selectGrade" class="nav-link scrollto active"><i class="bi bi-arrow-right-circle-fill"></i> <span>NEXT</span></a></li>
+                                                    <button type="Submit" class="btn btn-outline-primary" name="Submit">คำนวณค่า BMI</button>
                                                 </center>
-                                            </ul>
-                                        </nav>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                        <h4 class="mb-4">Warning, please read</h4>
-                                        <h4 class="small mb-0">- Up to 31 days only !</h4><br>
-                                        <h4 class="small mb-0">- The year has a maximum of 2023 only !</h4><br>
-                                        <h4 class="small mb-0">- There is no date or year that is Zero !</h4>
+                                    <div class="text-dark px-3 py-4 p-md-5 mx-md-4">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <?php include 'controller/bmiCalculator.php';?>
                                     </div>
                                 </div>
                             </div>
