@@ -13,22 +13,26 @@ if(isset($_POST['Submit'])){
 }
 
 if(isset($BMI)){
-        if($BMI <= 18.50){
+        if($BMI <= 18.50){ ?>
+                <br><br><img src="asset/img/underweight.jpg" style="width: 250px;" alt="underweight"><br><br> <?php
                 echo "<p>ส่วนสูง: {$Height} CM</p>";
                 echo "<p>น้ำหนัก: {$Weight} KG</p>";
                 echo "<p>BMI: {$BMI}</p>";
                 echo "<p>รูปร่าง: คุณผอมเกินไป</p>";
-        }else if($BMI >= 18.6 && $BMI <= 24.0){
+        }else if($BMI >= 18.6 && $BMI <= 24.0){ ?>
+                 <br><br><img src="asset/img/normalweight.jpg" style="width: 250px;" alt="normalweight"><br><br> <?php
                 echo "<p>ส่วนสูง: {$Height} CM</p>";
                 echo "<p>น้ำหนัก: {$Weight} KG</p>";
                 echo "<p>BMI: {$BMI}</p>";
                 echo "<p>รูปร่าง: คุณน้ำหนักตามมาตรฐาน</p>";
-        }else if($BMI >= 25.0 && $BMI <= 29.9){
+        }else if($BMI >= 25.0 && $BMI <= 29.9){ ?>
+                 <br><br><img src="asset/img/fat.jpg" style="width: 250px;" alt="fat"><br><br> <?php
                 echo "<p>ส่วนสูง: {$Height} CM</p>";
                 echo "<p>น้ำหนัก: {$Weight} KG</p>";
                 echo "<p>BMI: {$BMI}</p>";
                 echo "<p>รูปร่าง: คุณอ้วน</p>";
-        }else{
+        }else{  ?>
+                 <br><br><img src="asset/img/veryfat.png" style="width: 250px;" alt="veryfat"><br><br> <?php
                 echo "<p>ส่วนสูง: {$Height} CM</p>";
                 echo "<p>น้ำหนัก: {$Weight} KG</p>";
                 echo "<p>BMI: {$BMI}</p>";
